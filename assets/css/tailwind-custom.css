@@ -1,0 +1,9 @@
+@theme {
+  --color-theme-green: #2f855a;
+  --color-theme-green-80: #276749;
+}
+
+/* Utility Example */
+.full-content {
+  @apply flex w-full min-w-0 grow flex-col;
+}
