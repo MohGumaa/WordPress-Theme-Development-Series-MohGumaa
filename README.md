@@ -50,7 +50,7 @@ git clone https://github.com/MohGumaa/WordPress-Theme-Development-Series-MohGuma
 2. Navigate to the theme directory:
 
 ```bash
-cd my-theme
+cd WordPress-Theme-Development-Series-MohGumaa
 ```
 
 3. Activate the theme from the WordPress dashboard.
