@@ -7,3 +7,23 @@
 .full-content {
   @apply flex w-full min-w-0 grow flex-col;
 }
+
+.custom-logo-link {
+  @apply w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-sm border border-gray-200 [&_img]:size-8 [&_img]:object-contain;
+}
+
+header nav li a {
+  @apply px-4 py-2 text-white hover:text-green-200 transition;
+}
+
+header nav li .sub-menu {
+  @apply absolute bg-white shadow-lg rounded-lg w-48 top-[70%] opacity-0 invisible transition-opacity duration-300 ease-in-out overflow-hidden;
+}
+
+header nav li .sub-menu li a {
+  @apply block px-4 py-2 text-gray-700 hover:bg-gray-100;
+}
+
+header nav .menu-item-has-children:hover > .sub-menu {
+  @apply opacity-100 visible;
+}

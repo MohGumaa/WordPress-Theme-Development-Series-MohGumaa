@@ -13,6 +13,13 @@ if ( ! defined( 'CB_VERSION' ) ) {
 if ( ! function_exists( 'my_theme_setup' ) ) :
 	function my_theme_setup() {
 		add_theme_support('title-tag'); 
+		add_theme_support('custom-logo');
+
+		register_nav_menus(array(
+			'primary_menu'   => __('Primary Menu', 'mytheme'),
+			'secondary_menu'   => __('Secondary Menu', 'mytheme'),
+			'footer_menu' => __('Footer Menu', 'mytheme'),
+    ));
 	}
 endif;
 add_action( 'after_setup_theme', 'my_theme_setup' );

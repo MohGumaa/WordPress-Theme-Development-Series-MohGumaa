@@ -3,7 +3,7 @@
  * Template Name: Contact Page
  * 
  */?>
-<?php get_header() ;?>
+<?php get_header('secondary') ;?>
   <main>
     <div class="container mx-auto py-12">
       <div class="grid grid-cols-1 lg:grid-cols-2">
