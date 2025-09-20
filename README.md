@@ -20,6 +20,7 @@ This theme is part of the [WordPress Theme Development Series](https://github.co
 
 ## 📂 Folder Structure
 
+```bash
 my-theme/
 ├── assets/ # Tailwind CSS, JS, images
 ├── inc/ # Theme core functions and classes
@@ -27,6 +28,7 @@ my-theme/
 ├── functions.php # Theme setup and includes
 ├── index.php # Main template file
 ├── style.css # Theme meta info (required by WordPress)
+```
 
 ---
 
