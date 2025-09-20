@@ -12,9 +12,18 @@ if ( ! defined( 'CB_VERSION' ) ) {
 
 if ( ! function_exists( 'my_theme_setup' ) ) :
 	function my_theme_setup() {
+		// Add title
 		add_theme_support('title-tag'); 
+
+		// Add Custom logo
 		add_theme_support('custom-logo');
 
+		// Add Feature image with custom size
+		add_theme_support('post-thumbnails');
+		add_image_size('blog-small-crop', 300, 200, true);
+		add_image_size('blog-small', 400, 400, false);
+
+		// Add menu
 		register_nav_menus(array(
 			'primary_menu'   => __('Primary Menu', 'mytheme'),
 			'secondary_menu'   => __('Secondary Menu', 'mytheme'),

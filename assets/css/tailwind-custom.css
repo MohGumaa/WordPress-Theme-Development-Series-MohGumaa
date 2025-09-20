@@ -27,3 +27,11 @@ header nav li .sub-menu li a {
 header nav .menu-item-has-children:hover > .sub-menu {
   @apply opacity-100 visible;
 }
+
+textarea {
+  @apply border border-gray-200 rounded-lg p-2 bg-white/10;
+}
+
+label {
+  @apply block mb-4;
+}
