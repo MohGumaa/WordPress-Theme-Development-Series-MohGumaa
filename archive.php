@@ -1,39 +1,31 @@
 <?php get_header() ;?>
-  <main>
-    <div class="container mx-auto py-12">
+  <main class="flex-1">
+    <div class="container mx-auto py-12 px-6">
 
     <?php if ( have_posts() ): ?>
 
-      <h1 class="mb-5 text-4xl font-bold text-gray-900">
-        <?php 
-        // single_cat_title(); 
-        the_archive_title();
-        ?>
-      </h1>
+      <div class="mb-12">
+        <h1 class="text-4xl font-semibold tracking-tight text-pretty bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent sm:text-5xl">
+          <?php single_cat_title(); ?>
+        </h1>
+        <p class="mt-2 text-lg/8 text-gray-500">Learn how to grow your business with our expert advice.</p>
+      </div>
 
-      <div class="grid gird-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="space-y-8">
         <?php 
           while ( have_posts() ) : 
             the_post();
-
             get_template_part( 'template-parts/content', 'excerpt' );
           endwhile;
         ?>
       </div>
 
-      <!-- Pagination  -->
-      <?php 
-        // previous_posts_link();
-        // next_posts_link();
-
-         the_posts_pagination(
-          array(
-            'mid_size'  => 2,
-            'prev_text' => __( 'Prev', '_tw' ),
-            'next_text' => __( 'Next', '_tw' ),
-          )
-        );
-      ?>
+      <div class="mt-16 flex justify-center [&_a]:text-lg [&_a]:text-gray-700 [&_a]:font-medium [&_a]:hover:text-sky-500">
+        <?php 
+          previous_posts_link();
+          next_posts_link();
+        ?>
+      </div>
 
     <?php else : ?>
       <?php get_template_part( 'template-parts/content', 'none' ); ?>

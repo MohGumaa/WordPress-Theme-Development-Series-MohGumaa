@@ -35,3 +35,7 @@ textarea {
 label {
   @apply block mb-4;
 }
+
+.pagination {
+  @apply flex items-center gap-4 text-lg text-gray-500 font-medium;
+}

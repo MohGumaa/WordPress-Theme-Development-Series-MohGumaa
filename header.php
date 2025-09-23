@@ -9,16 +9,16 @@
 
   <?php wp_head(); ?>
 </head>
-<body <?php body_class('antialiased font-sans min-h-screen bg-background flex flex-col'); ?>>
+<body <?php body_class('antialiased font-sans min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col'); ?>>
   
-<header class="bg-theme-green backdrop-blur-md text-white shadow-sm relative z-50">
+<header class="bg-gradient-to-r from-theme-green to-theme-green-80 backdrop-blur-md text-white shadow-xl relative z-50 border-b border-white/10">
   <div class="container mx-auto px-6 py-4 flex items-center justify-between gap-4">
     <!-- Logo -->
     <?php 
       if ( has_custom_logo() ) {
         the_custom_logo();
       } else {
-        echo '<h1 class="text-xl font-bold">'. get_bloginfo('name') .'</h1>';
+        echo '<h1 class="text-2xl font-bold bg-gradient-to-r from-white to-green-100 bg-clip-text text-transparent">'. get_bloginfo('name') .'</h1>';
       }
     ?>
     
