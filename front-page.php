@@ -16,5 +16,9 @@
         </div>
       </div>
     </div>
+
+    <div class="container mx-auto my-10">
+      <?php get_search_form();?>
+    </div>
   </main>
 <?php get_footer(); ?>

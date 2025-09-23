@@ -43,3 +43,16 @@ label {
 .widget ul {
   @apply list-disc pl-5 [&_a]:text-sky-600 [&_a]:hover:text-sky-400 [&_a]:font-medium;
 }
+
+.searchform > div {
+  @apply flex gap-4 max-sm:px-4;
+}
+
+.searchform input[type='text'] {
+  @apply grid w-full grid-cols-[auto_1fr_auto] items-center gap-1 rounded-full px-4 py-2 text-left text-sm/6 text-gray-950/50 inset-ring inset-ring-gray-950/8 sm:w-80;
+}
+
+.searchform input[type='submit'],
+button {
+  @apply z-1 max-sm:hidden inline-block rounded-4xl bg-black px-8 py-2 text-sm/6 font-semibold text-white hover:bg-gray-800 cursor-pointer;
+}
