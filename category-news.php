@@ -11,7 +11,7 @@
         <?php if ( have_posts() ): ?>
 
           <div class="text-left mb-12">
-            <h1 class="mb-4 text-4xl xl:text-5xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+            <h1 class="mb-4 text-4xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
               <?php single_cat_title(); ?>
             </h1>
             <div class="w-24 h-1 bg-gradient-to-r from-theme-green to-theme-green-80 rounded-full"></div>
@@ -55,7 +55,11 @@
 
       </div>
 
-
+      <!-- Sidebar -->
+      <aside class="lg:w-1/3 space-y-8">
+        <div class="bg-gradient-to-br from-white to-gray-50/50 rounded-lg shadow-sm border border-gray-200/60 p-3 h-full">
+          <h3 class="text-xl font-bold text-gray-900 mb-6">Sidebar</h3>
+        </div>
       </aside>
 
     </div>

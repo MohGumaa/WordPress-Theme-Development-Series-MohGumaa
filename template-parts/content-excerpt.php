@@ -11,10 +11,10 @@
     <!-- Title & Excerpt -->
     <div class="flex flex-col justify-between p-4 leading-normal">
 
-      <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 hover:text-sky-400">
+      <h2 class="mb-2 text-xl font-bold tracking-tight text-gray-900 hover:text-sky-400">
         <?php the_title();?>
       </h2>
-      <div class="mb-3 font-normal text-gray-700 [&_p]:line-clamp-2"><?php the_excerpt(); ?></div>
+      <div class="mb-3 font-normal text-gray-700 [&_p]:line-clamp-2 [&_p]:text-sm"><?php the_excerpt(); ?></div>
     </div>
   </a>
 </article>
