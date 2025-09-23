@@ -39,3 +39,7 @@ label {
 .pagination {
   @apply flex items-center gap-4 text-lg text-gray-500 font-medium;
 }
+
+.widget ul {
+  @apply list-disc pl-5 [&_a]:text-sky-600 [&_a]:hover:text-sky-400 [&_a]:font-medium;
+}

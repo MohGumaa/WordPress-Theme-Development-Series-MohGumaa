@@ -56,11 +56,11 @@
       </div>
 
       <!-- Sidebar -->
-      <aside class="lg:w-1/3 space-y-8">
-        <div class="bg-gradient-to-br from-white to-gray-50/50 rounded-lg shadow-sm border border-gray-200/60 p-3 h-full">
-          <h3 class="text-xl font-bold text-gray-900 mb-6">Sidebar</h3>
-        </div>
-      </aside>
+      <?php if ( is_active_sidebar('blog-sidebar') ): ?>
+        <aside class="lg:w-1/3 space-y-8">
+          <?php dynamic_sidebar('blog-sidebar');?>
+        </aside>
+      <?php endif;?>
 
     </div>
 
