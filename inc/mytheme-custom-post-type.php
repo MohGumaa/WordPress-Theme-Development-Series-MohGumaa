@@ -33,6 +33,7 @@ function create_level_taxonomy() {
     ),
     'public' => true,
     'hierarchical' => true,
+    'show_admin_column' => true,
     'show_in_rest' => true,
   );
 
