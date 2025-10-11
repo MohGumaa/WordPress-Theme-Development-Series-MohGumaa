@@ -21,3 +21,21 @@ function create_course_post_type () {
 }
 
 add_action('init', 'create_course_post_type');
+
+
+function create_level_taxonomy() {
+  $args = array(
+    'labels' => array(
+      'name'               => __('Levels', 'mytheme'),
+      'singular_name'      => __('Level', 'mytheme'),
+      'add_new'            => __('Add New Level', 'mytheme'),
+      'add_new_item'       => __('Add New Level', 'mytheme'),
+    ),
+    'public' => true,
+    'hierarchical' => true,
+    'show_in_rest' => true,
+  );
+
+  register_taxonomy('level', array('courses'), $args);
+}
+add_action('init', 'create_level_taxonomy');

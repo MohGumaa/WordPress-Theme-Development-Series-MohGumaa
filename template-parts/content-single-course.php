@@ -20,6 +20,19 @@
   <div class="my-5">
     <?php the_content();?>
   </div>
+  
+  <?php 
+    $levels = get_the_terms(get_the_ID(), 'level');
+    if ($levels):
+  ?>
 
+    <div class="flex flex-wrap items-center gap-2">
+      <?php foreach($levels as $level): ?>
+        <a href="<?php echo get_term_link($level)?>" class="px-3 py-1 text-xs font-bold text-theme-green bg-theme-green-80/10 rounded-full uppercase">
+          <?php echo $level->name;?>
+        </a>
+      <?php endforeach; ?>
+    </div>
 
+  <?php endif;?>
 <?php endwhile; endif; ?>
