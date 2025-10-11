@@ -81,3 +81,9 @@ add_action('widgets_init', 'theme_register_sidebar');
  * Tailwind Custom CSS
  */
 require get_template_directory() . '/inc/tailwind-custom-css.php';
+
+
+/**
+ * Create Custom Post Type
+ */
+require get_template_directory() . '/inc/mytheme-custom-post-type.php';
