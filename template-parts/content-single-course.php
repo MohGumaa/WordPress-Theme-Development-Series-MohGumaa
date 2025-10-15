@@ -17,8 +17,45 @@
     <img src="<?php the_post_thumbnail_url('full')?>" alt="<?php the_title() ?>" class="rounded-lg w-full h-auto">
   <?php endif; ?>
 
-  <div class="my-5">
-    <?php the_content();?>
+  <div class="grid grid-cols-3 gap-10 my-5">
+    <div class="col-span-2">
+      <?php the_content();?>
+    </div>
+
+    <div>
+      <h2 class="text-2xl font-semibold">Course Feature</h2>
+      <ul class="grid grid-cols-2 gap-4 mt-4 border-t pt-4 text-gray-700 capitalize">
+
+      <li class="hidden">
+        <span class="font-semibold">👨‍🏫 instructor:</span>
+
+        <!-- Code to get ACF meta part 1 -->
+        <span><?php 
+          // echo get_post_meta(get_the_ID(), 'price', true);
+        
+          ?></span>
+      </li>
+
+      <!-- Code get ACF field -->
+        <?php 
+          $duration = get_field('duration');
+          if($duration) :
+        ?>
+          <li>
+            <span class="font-semibold">⏱️ duration:</span>
+            <span><?php echo $duration?></span>
+          </li>
+        <?php endif;?>
+        <li>
+          <span class="font-semibold">👨‍🏫 instructor:</span>
+          <span><?php the_field('instructor')?></span>
+        </li>
+        <li>
+          <span class="font-semibold">👨‍🏫 price:</span>
+          <span><?php the_field('price')?></span>
+        </li>
+      </ul>
+    </div>
   </div>
   
   <?php 

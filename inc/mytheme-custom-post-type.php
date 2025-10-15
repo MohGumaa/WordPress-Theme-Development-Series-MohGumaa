@@ -12,7 +12,7 @@ function create_course_post_type () {
     'has_archive' => true,
     'hierarchical'       => false,
     'menu_icon' => 'dashicons-welcome-learn-more',
-    'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+    'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
     // 'rewrite' => array('slug' => __('our-courses')),
     'show_in_rest' => true,
   );
